@@ -1,15 +1,7 @@
 pipeline {
-    agent {
-        UbuntuMM0607
-    }
+    agent 'UbuntuMM0607'
     
     stages {
-        stage('Checkout') {
-            steps {
-                // Checkout your source code from version control (e.g., Git)
-                //checkout scm
-            }
-        }
         
         stage('Build') {
             steps {
@@ -18,20 +10,6 @@ pipeline {
             }
         }
         
-        stage('Test') {
-            steps {
-                // Run tests (e.g., unit tests, integration tests)
-                //sh 'mvn test' // Modify this according to your testing framework
-            }
-        }
-        
-        stage('Deploy') {
-            steps {
-                // Deploy your application to a web server or cloud platform
-                //sh 'scp target/my-app.war user@webserver:/path/to/deployment/' // Example for deploying a Java web application
-                // You can use different deployment methods based on your project's requirements
-            }
-        }
     }
     
     post {
