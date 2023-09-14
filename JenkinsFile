@@ -1,5 +1,7 @@
 pipeline {
-    agent 'UbuntuMM0607'
+    agent {
+        label 'UbuntuMM0607'
+    }
     
     stages {
         
