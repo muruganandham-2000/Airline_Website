@@ -1,8 +1,16 @@
 <?php
 include("db_connection.php");
+
 if (session_start()) {
     $my_value = isset($_SESSION['Mail']) ? $_SESSION['Mail'] : null;
+    $last_act = isset($_SESSION['LAST_ACTIVITY']) ? $_SESSION['LAST_ACTIVITY'] : null;
 }
+
+if (isset($_SESSION['LAST_ACTIVITY']) && (round(microtime(true) * 1000) - $_SESSION['LAST_ACTIVITY'] > 60000)) {
+    session_unset();
+    session_destroy();
+}
+
 $db = new db_connection();
 $data = json_decode(file_get_contents("php://input"), true);
 
@@ -13,7 +21,7 @@ $message_list=array(
     "Amount is not pulling from DB",
     "From and To cannot be same",
     "Parameters Missing",
-    "User id field is missing",
+    "Please login before booking",
     "From field is missing",
     "To field is missing",
     "Depart date is empty",
