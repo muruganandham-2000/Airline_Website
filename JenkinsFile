@@ -9,6 +9,7 @@ pipeline {
             steps {
                 // Use the 'sh' step to run a shell command
                 script {
+                    System.setProperty("org.jenkinsci.plugins.durabletask.BourneShellScript.HEARTBEAT_CHECK_INTERVAL", "3800");
                     // Replace this with your desired shell command
                     def shellCommand = "python3 --version"
                     
