@@ -9,7 +9,7 @@ pipeline {
         stage('Build') {
             steps {
                 // Replace this with your build commands
-                echo 'Pipeline successfully completed!'
+                sh 'python3 --version'
             }
         }
 
