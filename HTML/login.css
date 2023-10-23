@@ -1,7 +1,7 @@
 body{
 	margin: 0;
 	padding: 0;
-	background-image:linear-gradient(rgba(0,0,0,0.5),  rgba(0,0,0,0.5)),url("../IMAGE/1287409.jpg");
+	background-image:linear-gradient(rgba(0,0,0,0.5),  rgba(0,0,0,0.5)),url("1287409.jpg");
 	background-size:cover;
 	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     text-align: center;

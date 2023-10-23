@@ -14,7 +14,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-image:linear-gradient(rgba(0,0,0,0.5),  rgba(0,0,0,0.5)),url("../IMAGE/1287407.jpg");
+    background-image:linear-gradient(rgba(0,0,0,0.5),  rgba(0,0,0,0.5)),url("1287407.jpg");
      background-size: cover;
 }
 .contact .content

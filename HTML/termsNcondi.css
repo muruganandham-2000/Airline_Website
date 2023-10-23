@@ -1,6 +1,6 @@
 
 body{
-    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../IMAGE/hi.jpg");
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("hi.jpg");
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
