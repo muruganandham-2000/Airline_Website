@@ -11,16 +11,7 @@ pipeline {
                 script {
                     System.setProperty("org.jenkinsci.plugins.durabletask.BourneShellScript.HEARTBEAT_CHECK_INTERVAL", "3800");
                     // Replace this with your desired shell command
-                    def shellCommand = "python3 --version"
-                    
-                    // Run the shell command
-                    def result = sh(script: shellCommand, returnStatus: true)
-                    
-                    if (result == 0) {
-                        echo "Shell command executed successfully"
-                    } else {
-                        error "Shell command failed with exit code $result"
-                    }
+                    sh 'python --version'
                 }
             }
         }
