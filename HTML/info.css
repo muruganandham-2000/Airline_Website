@@ -1,0 +1,147 @@
+body
+{
+
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../IMAGE/window.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.booking-form-box
+{
+    max-width: 350px;
+    color: sandybrown;
+    margin: 10% auto 0;
+    box-sizing: border-box;
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 30px;
+    
+}
+.radio-btn
+{
+    margin: 0 20px;
+}
+.radio-btn .btn
+{
+    margin: 20px 10px 20px 0;
+    box-shadow: none;
+}
+.radio-btn .btn::after
+{
+    content: '';
+    height: 15px;
+    width: 15px;
+    top:-2px;
+    left:-1px;
+    background-color: #fff;
+    position: relative;
+    display: inline-block;
+    border: 3px soild #fff;
+    visibility: visible;
+    border-radius: 50%;
+}
+.radio-btn .btn:checked::after
+{
+    content: '';
+    background-color: #fff;
+    transform: 0.5s;
+}
+.radio-btn span
+{
+    color: chocolate;
+    margin-right: 5px;
+    font-size: 15px;
+    font-weight: bold;
+}
+.booking-form
+{
+    padding: 0 20px 20px;
+}
+.booking-form label
+{
+    margin-bottom: 5px;
+    margin-top: 10px;
+    font-size: 15px;
+    color: chocolate;
+    font-weight: bold;
+}
+input::placeholder
+{
+    color: #fff !important;
+}
+.input-grp
+{
+    width: 151px;
+    display: inline-block;
+}
+.form-control
+{
+    font-size: 15px!important;
+    border-radius: 0!important;
+    color: #fff!important;
+    background: transparent!important;
+    box-shadow: none!important;
+    font-weight: bold!important;
+    font-size: large;
+    
+}
+
+
+
+.select-date::-webkit-inner-spin-button,
+.select-date::-webkit-outer-spin-button
+{
+ -webkit-appearance: none;
+ margin: 0;
+}
+.select-date::-webkit-calender-picker-indicator
+{
+    background: transparent!important;
+}
+.custom-select
+{
+    color: #fff!important;
+    font-size: 15px!important;
+    border: 1px solid #ced4da!important;
+    box-shadow: none!important;
+    border-radius: 0!important;
+    background: transparent!important;
+    font-weight: bold;
+}
+.custom-select option
+{
+    color: chocolate;
+}
+.flight
+{
+    width: 100%;
+    padding: 9px 0!important;
+    font-size: 15px!important;
+    border: 1px solid #ced4da!important;
+    background: transparent!important;
+    box-shadow: none!important;
+    border-radius: 0!important;
+    font-weight: bold;
+}
+.flight:hover
+{
+    background: chocolate!important;
+    color: #000!important;
+    transition: 0.5s;
+}
+.bnb{
+	color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+}
+.a1{
+	color: rgb(255, 0, 0);
+	font-size: 16px;
+	font-weight: bold;
+    /*position: absolute;*/
+    margin-left: 650px;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+    
+

@@ -1,0 +1,67 @@
+body
+{
+  background:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(../IMAGE/802589.jpg);
+  background-size: cover;
+  font-family: Arial;
+}
+.wrap{
+  width: 350px;
+  border-radius: 20px;
+  margin: auto;
+  background: rgba(17, 17, 17, 0.8);
+  box-sizing: border-box;
+  padding: 40px;
+  color: chocolate;
+  margin-top: 100px;
+  margin-bottom: 40px;
+  top:50%;
+	left:50%;
+}
+
+.wrap a{
+  color: #fff;
+	font-size: 16px;
+	font-weight: bold;
+	text-decoration: none;
+  margin: 60px;
+  top: 50%;
+  
+}
+.wrap a:hover{
+  color: chocolate;
+  opacity: 0.7;
+}
+h2{
+  text-align: center;
+}
+input[type=text],input[type=password],input[type=email]
+{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 12px 5px;
+  background: rgba(252, 137, 70, 0.1);
+  border-bottom: 1px dotted chocolate;
+  color: brown;
+  border-radius: 5px;
+  margin: 5px;
+  font-weight: bold;
+}
+input[type=submit]
+{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 0px;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  background: chocolate;
+  opacity: 0.7;
+  border-radius: 20px;
+  font-size: 20px;
+  color: black;
+}
+input[type=submit]:hover
+{
+  background: rgba(228, 67, 8, 0.801);
+  opacity: 0.7;
+}

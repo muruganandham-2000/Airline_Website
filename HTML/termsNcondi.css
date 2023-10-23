@@ -1,0 +1,26 @@
+
+body{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url("../IMAGE/hi.jpg");
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a{
+    color: rgb(236, 125, 14);
+    font-size: 16px;
+    font-weight:bolder;
+    position: fixed;
+    bottom: 8;
+    text-align: center;
+    transform: translateX(-50%);
+}
+
+h2{
+    color: chocolate;
+}
+
+h1{
+    color: chocolate;
+}
+p{
+    color: rgb(255, 255, 255);
+}
