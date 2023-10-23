@@ -1,5 +1,8 @@
-# Use an official Nginx image as the base image
-FROM nginx:alpine
+# Use the official Nginx image as the base image
+FROM nginx:latest
 
-# Copy your HTML file to the default Nginx web root directory
-COPY HTML/index.html /usr/share/nginx/html/
+# Copy your HTML files to the Nginx default web directory
+COPY HTML/index.html /usr/share/nginx/html
+
+# Expose port 80, which is the default HTTP port
+EXPOSE 80
