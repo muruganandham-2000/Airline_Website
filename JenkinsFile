@@ -2,31 +2,27 @@ pipeline {
     agent {
         label 'UbuntuJenkinSlave'
     }
-    
+
     stages {
-        
-        stage('Run Shell Command') {
+       
+
+        stage('Build') {
             steps {
-                // Use the 'sh' step to run a shell command
-                script {
-                    System.setProperty("org.jenkinsci.plugins.durabletask.BourneShellScript.HEARTBEAT_CHECK_INTERVAL", "3800");
-                    // Replace this with your desired shell command
-                    sh 'python --version'
-                }
+                // Replace this with your build commands
+                echo 'Pipeline successfully completed!'
             }
         }
-        
-    }
-    
+
+            }
+
     post {
         success {
-            // Notify or perform additional actions on successful deployment
-            echo 'Deployment successful!'
+            // This block will be executed if the pipeline is successful
+            echo 'Pipeline successfully completed!'
         }
-        
         failure {
-            // Notify or perform actions on pipeline failure
-            echo 'Deployment failed!'
+            // This block will be executed if the pipeline fails
+            echo 'Pipeline failed. Please check the build and deployment logs.'
         }
     }
 }
