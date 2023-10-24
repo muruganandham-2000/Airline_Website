@@ -10,8 +10,8 @@ pipeline {
                     if (vmState == 'running') {
                         echo "VM '${vmName}' is already running."
                     } else {
-                        sh "\"C:\\Program Files\\Oracle\\VirtualBox\\VBoxManage.exe\" startvm ${vmName} --type headless"
-                        echo "Started VM '${vmName}'."
+                        bat "\"C:\\Program Files\\Oracle\\VirtualBox\\VBoxManage.exe\" startvm ${vmName} --type headless"
+                        //echo "Started VM '${vmName}'."
                     }
                 }
             }
