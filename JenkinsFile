@@ -5,14 +5,14 @@ pipeline {
         stage('Start VM') {
             steps {
                 script {
-                    def vmName = 'JenkinSlave'  // Replace with your VM's name
-                    def vmState = sh(script: "VBoxManage showvminfo ${vmName} --machinereadable | grep '^VMState=' | cut -d'=' -f2", returnStatus: true).trim()
-                    if (vmState == 'running') {
-                        echo "VM '${vmName}' is already running."
-                    } else {
-                        bat "\"C:\\Program Files\\Oracle\\VirtualBox\\VBoxManage.exe\" startvm ${vmName} --type headless"
+                    //def vmName = 'JenkinSlave'  // Replace with your VM's name
+                    //def vmState = sh(script: "VBoxManage showvminfo ${vmName} --machinereadable | grep '^VMState=' | cut -d'=' -f2", returnStatus: true).trim()
+                    //if (vmState == 'running') {
+                      //  echo "VM '${vmName}' is already running."
+                    //} else {
+                        bat "\"C:\\Program Files\\Oracle\\VirtualBox\\VBoxManage.exe\" startvm JenkinSlave --type headless"
                         //echo "Started VM '${vmName}'."
-                    }
+                    //}
                 }
             }
         }
