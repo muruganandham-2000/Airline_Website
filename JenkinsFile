@@ -5,7 +5,19 @@ pipeline {
 
     stages {
        
-
+        stage('Start VM') {
+            steps {
+                script {
+                    def vmName = 'JenkinSlave'  // Replace with your VM's name
+                    def vmState = sh(script: "VBoxManage showvminfo ${vmName} --machinereadable | grep '^VMState=' | cut -d'=' -f2", returnStatus: true).trim()
+                    if (vmState == 'running') {
+                        echo "VM '${vmName}' is already running."
+                    } else {
+                        sh "VBoxManage startvm ${vmName} --type headless"
+                        echo "Started VM '${vmName}'."
+                    }
+                }
+            }}
         stage('Build') {
             steps {
                 // Replace this with your build commands
