@@ -1,19 +1,34 @@
 pipeline {
-    agent {
-        label 'UbuntuJenkinSlave'
-    }
+    agent none
 
     stages {
-       
-        
-        stage('Build') {
+        stage('Start VM') {
             steps {
-                // Replace this with your build commands
-                sh 'python3 --version'
+                script {
+                    def vmName = 'JenkinSlave'  // Replace with your VM's name
+                    def vmState = sh(script: "VBoxManage showvminfo ${vmName} --machinereadable | grep '^VMState=' | cut -d'=' -f2", returnStatus: true).trim()
+                    if (vmState == 'running') {
+                        echo "VM '${vmName}' is already running."
+                    } else {
+                        sh "VBoxManage startvm ${vmName} --type headless"
+                        echo "Started VM '${vmName}'."
+                    }
+                }
             }
         }
 
+        stage('Build') {
+            when {
+                expression { currentBuild.resultIsBetterOrEqualTo('SUCCESS') }
             }
+            agent {
+                label 'UbuntuJenkinSlave'  // Replace with your agent label
+            }
+            steps {
+                sh 'python3 --version'
+            }
+        }
+    }
 
     post {
         success {
